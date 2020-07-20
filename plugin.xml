@@ -1,17 +1,17 @@
 <?xml version='1.0' encoding='utf-8'?>
 <plugin id="webView" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
 	<name>WebView</name>
-	<js-module name="WebView" src="www/WebView.js">
-		<clobbers target="cordova.plugins.WebView" />
+	<js-module name="WebView" src="www/AppWebView.js">
+		<clobbers target="cordova.plugins.AppWebView" />
 	</js-module>
 
 	<platform name="ios">
+		<preference name="WKWebViewOnly" value="true" />
 		<config-file parent="/*" target="config.xml">
-			<feature name="WebView">
-				<param name="ios-package" value="WebView"/>
+			<feature name="AppWebView">
+				<param name="ios-package" value="AppWebView"/>
 			</feature>
 		</config-file>
- 		<framework src="WebKit.framework" weak="true" />
 
         <header-file src="src/ios/AppWebView.h" />
 		<source-file src="src/ios/AppWebView.m" />
