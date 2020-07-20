@@ -1,5 +1,18 @@
-var exec = require('cordova/exec');
+// Empty constructor
+function AppWebView() {}
 
-exports.coolMethod = function (arg0, success, error) {
-    exec(success, error, 'WebView', 'coolMethod', [arg0]);
+// The function that passes work along to native shells
+// Message is a string, duration may be 'long' or 'short'
+AppWebView.prototype.coolMethod = function(arg0, successCallback, errorCallback) {
+  cordova.exec(successCallback, errorCallback, 'AppWebView', 'coolMethod', [arg0]);
+}
+
+// Installation constructor that binds EntelFingerPlugin to window
+AppWebView.install = function() {
+  if (!window.plugins) {
+    window.plugins = {};
+  }
+  window.plugins.AppWebView = new EntelFingerPlugin();
+  return window.plugins.AppWebView;
 };
+cordova.addConstructor(AppWebView.install);
