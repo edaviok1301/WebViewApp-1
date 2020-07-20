@@ -6,7 +6,7 @@
 	</js-module>
 
 	<platform name="ios">
-		<preference name="WKWebViewOnly" value="true" />
+		
 		<config-file parent="/*" target="config.xml">
 			<feature name="AppWebView">
 				<param name="ios-package" value="AppWebView"/>
