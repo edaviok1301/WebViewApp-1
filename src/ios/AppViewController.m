@@ -3,13 +3,10 @@
 @interface AppViewController (){
     UIActivityIndicatorView *loadingIndicator;
 }
-@property WKWebView *webView;
-@property UIViewController *webViewController;
+
 @end
 
 @implementation AppViewController
-@synthesize webView = _webView;
-@synthesize webViewController = _webViewController;
 
 + (instancetype)sharedHelper{
     

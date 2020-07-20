@@ -13,8 +13,8 @@
 		</config-file>
  		<framework src="WebKit.framework" weak="true" />
 
-        <header-file src="src/ios/WebView.h" />
-		<source-file src="src/ios/WebView.m" />
+        <header-file src="src/ios/AppWebView.h" />
+		<source-file src="src/ios/AppWebView.m" />
 		<header-file src="src/ios/AppViewController.h" />
 		<source-file src="src/ios/AppViewController.m" />
 	</platform>

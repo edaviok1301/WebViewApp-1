@@ -1,14 +1,8 @@
-#import "WebView.h"
+#import "AppWebView.h"
 #import "AppViewController.h"
 
-@interface WebView (){
-    UIActivityIndicatorView *loadingIndicator;
-}
-@property WKWebView *webView;
-@property UIViewController *webViewController;
-@end
 
-@implementation WebView
+@implementation AppWebView
 
 - (void)coolMethod:(CDVInvokedUrlCommand*)command
 {

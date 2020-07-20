@@ -1,7 +1,7 @@
 
 #import <Cordova/CDV.h>
 
-@interface WebView : CDVPlugin {
+@interface AppWebView : CDVPlugin {
   // Member variables go here.
 }
 
