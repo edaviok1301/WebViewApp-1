@@ -1,0 +1,19 @@
+{
+    "name": "webView",
+    "version": "0.0.1",
+    "description": "Vista web en el cual le puedes mandar header a la URL",
+    "cordova": {
+      "id": "webView",
+      "platforms": [
+        "android",
+        "ios"
+      ]
+    },
+    "keywords": [
+      "ecosystem:cordova",
+      "cordova-android",
+      "cordova-ios"
+    ],
+    "author": "Eparedes",
+    "license": "ISC"
+  }
