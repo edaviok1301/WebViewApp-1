@@ -61,7 +61,9 @@
     [newView addSubview:_webView];
     [newView addSubview:toolbar];
     [_webViewController.view addSubview:newView];
-    [self presentViewController:_webViewController animated:YES completion:nil];
+    _webViewController.modalPresentationStyle = UIModalPresentationFullScreen;
+    UIViewController * uvc = [[[UIApplication sharedApplication] keyWindow] rootViewController];
+    [uvc presentViewController:_webViewController animated:YES completion:nil];
     [_webView loadRequest:request];
 }
 

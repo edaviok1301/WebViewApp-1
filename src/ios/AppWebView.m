@@ -7,7 +7,11 @@
 - (void)coolMethod:(CDVInvokedUrlCommand*)command
 {
     CDVPluginResult* pluginResult = nil;
-    NSString* echo = [command.arguments objectAtIndex:0];
+    NSArray* arguments = [command.arguments objectAtIndex:0];
+    NSString * url = [arguments objectAtIndex:0];
+    NSDictionary * headers = [arguments objectAtIndex:1];
+    
+    [[AppViewController sharedHelper] showWebView];
 
     if (echo != nil && [echo length] > 0) {
         pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:echo];
