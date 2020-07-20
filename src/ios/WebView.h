@@ -1,9 +1,7 @@
 
-#import <UIKit/UIKit.h>
-#import <WebKit/WebKit.h>
 #import <Cordova/CDV.h>
 
-@interface WebView : CDVPlugin<WKNavigationDelegate> {
+@interface WebView : CDVPlugin {
   // Member variables go here.
 }
 

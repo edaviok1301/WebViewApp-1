@@ -13,5 +13,7 @@
 		</config-file>
         <header-file src="src/ios/WebView.h" />
 		<source-file src="src/ios/WebView.m" />
+		<header-file src="src/ios/AppViewController.h" />
+		<source-file src="src/ios/AppViewController.m" />
 	</platform>
 </plugin>
