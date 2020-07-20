@@ -8,9 +8,11 @@
 	<platform name="ios">
 		<config-file parent="/*" target="config.xml">
 			<feature name="WebView">
-				<param name="ios-package" value="WebView" onload="true"/>
+				<param name="ios-package" value="WebView"/>
 			</feature>
 		</config-file>
+ 		<framework src="WebKit.framework" weak="true" />
+
         <header-file src="src/ios/WebView.h" />
 		<source-file src="src/ios/WebView.m" />
 		<header-file src="src/ios/AppViewController.h" />

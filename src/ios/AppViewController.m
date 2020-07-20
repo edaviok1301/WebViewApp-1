@@ -11,7 +11,7 @@
 @synthesize webView = _webView;
 @synthesize webViewController = _webViewController;
 
-+ (instancetype)sharedHelpe{
++ (instancetype)sharedHelper{
     
     static AppViewController *sharedClass = nil;
     
