@@ -8,7 +8,7 @@
 	<platform name="ios">
 		<config-file parent="/*" target="config.xml">
 			<feature name="WebView">
-				<param name="ios-package" value="WebView" />
+				<param name="ios-package" value="WebView" onload="true"/>
 			</feature>
 		</config-file>
         <header-file src="src/ios/WebView.h" />
