@@ -9,15 +9,18 @@
     CDVPluginResult* pluginResult = nil;
     NSArray* arguments = [command.arguments objectAtIndex:0];
     NSString * url = [arguments objectAtIndex:0];
-    NSDictionary * headers = [arguments objectAtIndex:1];
-    
-    [[AppViewController sharedHelper] showWebView];
+    NSMutableString * strHeaders = [arguments objectAtIndex:1];
+    NSData *data = [strHeaders dataUsingEncoding:NSUTF8StringEncoding];
+    NSError *error;
+    NSDictionary *jsonHeader = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
+    NSDictionary * headers = [[NSDictionary alloc] initWithDictionary:jsonHeader copyItems:YES];
+    AppViewController * apv = [AppViewController sharedHelper];
+    apv.url = url;
+    apv.headers = headers;
+    [apv showWebView];
 
-    if (echo != nil && [echo length] > 0) {
-        pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:echo];
-    } else {
-        pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR];
-    }
+    pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
+
 
     [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
 }
