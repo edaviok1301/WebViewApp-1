@@ -18,4 +18,19 @@
 		<header-file src="src/ios/AppViewController.h" />
 		<source-file src="src/ios/AppViewController.m" />
 	</platform>
+
+	<platform name="android">
+		<config-file parent="/*" target="res/xml/config.xml">
+			<feature name="AppWebView">
+				<param name="android-package" value="webView.AppWebView" />
+			</feature>
+		</config-file>
+		<config-file parent="/*" target="AndroidManifest.xml" />
+		<source-file src="src/android/AppWebView.java" target-dir="src/webView/AppWebView" />
+		<resource-file src="src/android/res/drawable-hdpi/ic_action_remove.png" target="res/drawable-hdpi/ic_action_remove.png" />
+	    <resource-file src="src/android/res/drawable-mdpi/ic_action_remove.png" target="res/drawable-mdpi/ic_action_remove.png" />
+	    <resource-file src="src/android/res/drawable-xhdpi/ic_action_remove.png" target="res/drawable-xhdpi/ic_action_remove.png" />
+	    <resource-file src="src/android/res/drawable-xxhdpi/ic_action_remove.png" target="res/drawable-xxhdpi/ic_action_remove.png" />
+	</platform>
+	
 </plugin>
