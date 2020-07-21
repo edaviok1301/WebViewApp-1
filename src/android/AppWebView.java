@@ -42,7 +42,7 @@ import java.util.Map;
 /**
  * This class echoes a string called from JavaScript.
  */
-public class WebView extends CordovaPlugin {
+public class AppWebView extends CordovaPlugin {
 
 
     protected static final String LOG_TAG = "InAppBrowser";
